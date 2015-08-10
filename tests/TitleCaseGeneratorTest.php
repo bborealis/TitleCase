@@ -4,6 +4,19 @@
 
     class TitleCaseGeneratorTest extends PHPUnit_Framework_TestCase
     {
+        function test_makeTitleCase_oneLetter(){
+
+            //Arange
+            $test_TitleCaseGenerator = new TitleCaseGenerator;
+            $input = "b";
+
+            //Act
+            $result = $test_TitleCaseGenerator->makeTitleCase($input);
+
+            //Assert
+            $this->assertEquals("B", $result);
+        }
+
 
         function test_makeTitleCase_oneWord(){
 
@@ -81,6 +94,19 @@
 
             //Assert
             $this->assertEquals("Beowulf and Me", $result);
+        }
+
+        function test_makeTitleCase_unusualNames() {
+
+            //Arrange
+            $test_TitleCaseGenerator = new TitleCaseGenerator;
+            $input = "here's to beowulf and McDuff and O'Malley";
+
+            //Act
+            $result = $test_TitleCaseGenerator->makeTitleCase($input);
+
+            //Assert
+            $this->assertEquals("Here's to Beowulf and McDuff and O'Malley", $result);
         }
 
     }

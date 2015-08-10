@@ -13,7 +13,16 @@
             foreach ($input_array_of_words as $word) {
                 $lower_case_count = 0;
                 $firstword++;
-                $word = strtolower($word);
+                $mcname = "hi";
+
+                if (strlen($word) != 1) {
+                    $mcname = $word[0] . $word[1];
+                }
+
+                if (!(($mcname == "Mc") || ($mcname == "O'"))) {
+                    $word = strtolower($word);
+                }
+
                 foreach ($ignore_lowercase as $lowercase) {
                     if ($word == $lowercase) {
                         $lower_case_count++;
