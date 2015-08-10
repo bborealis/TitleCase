@@ -2,9 +2,25 @@
 
     class TitleCaseGenerator
     {
-        function makeTitleCase($input_title)
+        // private $title;
+        //
+        // function __construct($title) {
+        //     $this->title = $title;
+        // }
+        //
+        // function setTitle($new_title) {
+        //     $this->title = (string) $new_title;
+        // }
+        //
+        // function getTitle() {
+        //     return $this->title;
+        // }
+        //
+
+
+        function makeTitleCase($title)
         {
-            $input_array_of_words = explode(" ", $input_title);
+            $input_array_of_words = explode(" ", $title);
             $output_titlecased = array();
             $ignore_lowercase = array("from", "to", "in", "the", "a", "and", "but", "for",
                                     "or", "nor", "so", "yet", "on");
