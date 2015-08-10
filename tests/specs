@@ -1,0 +1,10 @@
+Behavior                                          Input                                         Output
+Single letter                                       b                                               B
+Capitalizes first letter of word                beowulf                                         Beowulf
+Capitalizes first letter of multi words         beowulf begins                                  Beowulf Begins
+Does not capitalize designated words        beowulf from brighton                               Beowulf from Brighton
+capitalizes designated words if first word  from beowulf to hulk                                From Beowulf to Hulk
+Handles non-letter characters               57 beowulf alternate!!                              57 Beowulf Alternate!!
+Manages all uppercase entries               BEOWULF ON THE ROCKS                                Beowulf on the Rocks
+Manages uppercase entries                   BeoWulf aNd mE                                      Beowulf and Me
+manages unique case entires                 here's to beowulf and McDuff and O'Malley           Here's to Beowulf and McDuff and O'Malley

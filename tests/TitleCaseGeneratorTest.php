@@ -30,9 +30,21 @@
 
             //Assert
             $this->assertEquals("The Little Mermaid", $result);
-
-
         }
+
+        function test_makeTitleCase_leaveLowerCase() {
+
+            //Arrange
+            $test_TitleCaseGenerator = new TitleCaseGenerator;
+            $input = "beowulf from brighton";
+
+            //Act
+            $result = $test_TitleCaseGenerator->makeTitleCase($input);
+
+            //Assert
+            $this->assertEquals("Beowulf from Brighton", $result);
+        }
+
     }
 
 ?>
